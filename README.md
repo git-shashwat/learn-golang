@@ -37,15 +37,22 @@ learn-golang/
 │   ├── 1.2_bugfix/
 │   ├── 1.3_compile_error/
 │   └── 1.4_typing/
-└── variables/             # Variables, types, and control flow
-    ├── 2.1_declaration/
-    ├── 2.2_short_declaration/
-    ├── 2.3_multiple_declaration/
-    ├── 2.4_type_casting/
-    ├── 2.5_constants/
-    ├── 2.6_computed_constant/
-    ├── 2.7_formatted_string/
-    └── 2.8_conditionals/
+├── variables/             # Variables, types, and control flow
+│   ├── 2.1_declaration/
+│   ├── 2.2_short_declaration/
+│   ├── 2.3_multiple_declaration/
+│   ├── 2.4_type_casting/
+│   ├── 2.5_constants/
+│   ├── 2.6_computed_constant/
+│   ├── 2.7_formatted_string/
+│   └── 2.8_conditionals/
+└── functions/             # Functions and return values
+    ├── 3.1_signature/
+    ├── 3.2_multiple_params/
+    ├── 3.3_pass_by_value/
+    ├── 3.4_ignore_return_values/
+    ├── 3.5_named_returns/
+    └── 3.6_early_return/
 ```
 
 ## Lessons
@@ -72,12 +79,23 @@ learn-golang/
 | `2.7_formatted_string` | Formatted Strings | Building strings with `fmt.Sprintf` |
 | `2.8_conditionals` | Conditionals | Branching logic with `if` / `else` |
 
+### Functions
+
+| Lesson | Topic | What you'll learn |
+|--------|-------|-------------------|
+| `3.1_signature` | Function Signatures | Defining functions with parameters and return types |
+| `3.2_multiple_params` | Multiple Parameters | Grouping parameters of the same type in a signature |
+| `3.3_pass_by_value` | Pass by Value | How arguments are copied and reassigned return values |
+| `3.4_ignore_return_values` | Ignoring Returns | Using `_` to discard unwanted return values |
+| `3.5_named_returns` | Named Returns | Declaring and using named return values |
+| `3.6_early_return` | Early Return | Returning early with multiple values and errors |
+
 ## Running All Lessons
 
 Run every lesson in order:
 
 ```bash
-for dir in introduction/*/ variables/*/; do
+for dir in introduction/*/ variables/*/ functions/*/; do
   echo "Running $dir"
   go run "$dir/main.go"
   echo
