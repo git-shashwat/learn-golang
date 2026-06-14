@@ -46,13 +46,18 @@ learn-golang/
 │   ├── 2.6_computed_constant/
 │   ├── 2.7_formatted_string/
 │   └── 2.8_conditionals/
-└── functions/             # Functions and return values
-    ├── 3.1_signature/
-    ├── 3.2_multiple_params/
-    ├── 3.3_pass_by_value/
-    ├── 3.4_ignore_return_values/
-    ├── 3.5_named_returns/
-    └── 3.6_early_return/
+├── functions/             # Functions and return values
+│   ├── 3.1_signature/
+│   ├── 3.2_multiple_params/
+│   ├── 3.3_pass_by_value/
+│   ├── 3.4_ignore_return_values/
+│   ├── 3.5_named_returns/
+│   └── 3.6_early_return/
+└── structs/               # Structs and methods
+    ├── 4.1_definition/
+    ├── 4.2_nested_structs/
+    ├── 4.3_embedded_structs/
+    └── 4.4_struct_methods/
 ```
 
 ## Lessons
@@ -90,12 +95,21 @@ learn-golang/
 | `3.5_named_returns` | Named Returns | Declaring and using named return values |
 | `3.6_early_return` | Early Return | Returning early with multiple values and errors |
 
+### Structs
+
+| Lesson | Topic | What you'll learn |
+|--------|-------|-------------------|
+| `4.1_definition` | Struct Definition | Defining custom types with struct fields and passing them to functions |
+| `4.2_nested_structs` | Nested Structs | Composing structs from other struct types |
+| `4.3_embedded_structs` | Embedded Structs | Embedding structs to promote fields to the outer type |
+| `4.4_struct_methods` | Struct Methods | Defining methods on struct types with value receivers |
+
 ## Running All Lessons
 
 Run every lesson in order:
 
 ```bash
-for dir in introduction/*/ variables/*/ functions/*/; do
+for dir in introduction/*/ variables/*/ functions/*/ structs/*/; do
   echo "Running $dir"
   go run "$dir/main.go"
   echo
