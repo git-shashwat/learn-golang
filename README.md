@@ -53,11 +53,17 @@ learn-golang/
 │   ├── 3.4_ignore_return_values/
 │   ├── 3.5_named_returns/
 │   └── 3.6_early_return/
-└── structs/               # Structs and methods
-    ├── 4.1_definition/
-    ├── 4.2_nested_structs/
-    ├── 4.3_embedded_structs/
-    └── 4.4_struct_methods/
+├── structs/               # Structs and methods
+│   ├── 4.1_definition/
+│   ├── 4.2_nested_structs/
+│   ├── 4.3_embedded_structs/
+│   └── 4.4_struct_methods/
+└── interfaces/            # Interfaces and polymorphism
+    ├── 5.1_introduction/
+    ├── 5.2_implicit_interface/
+    ├── 5.3_multiple_interfaces/
+    ├── 5.4_type_assertions/
+    └── 5.5_type_switches/
 ```
 
 ## Lessons
@@ -104,12 +110,22 @@ learn-golang/
 | `4.3_embedded_structs` | Embedded Structs | Embedding structs to promote fields to the outer type |
 | `4.4_struct_methods` | Struct Methods | Defining methods on struct types with value receivers |
 
+### Interfaces
+
+| Lesson | Topic | What you'll learn |
+|--------|-------|-------------------|
+| `5.1_introduction` | Interface Introduction | Defining interfaces and using them with multiple struct types |
+| `5.2_implicit_interface` | Implicit Interfaces | How types satisfy interfaces without explicit declarations |
+| `5.3_multiple_interfaces` | Multiple Interfaces | Implementing and using more than one interface on a type |
+| `5.4_type_assertions` | Type Assertions | Extracting concrete types from interface values with `.(T)` |
+| `5.5_type_switches` | Type Switches | Handling multiple concrete types with `switch` on an interface |
+
 ## Running All Lessons
 
 Run every lesson in order:
 
 ```bash
-for dir in introduction/*/ variables/*/ functions/*/ structs/*/; do
+for dir in introduction/*/ variables/*/ functions/*/ structs/*/ interfaces/*/; do
   echo "Running $dir"
   go run "$dir/main.go"
   echo
