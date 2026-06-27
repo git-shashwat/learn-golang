@@ -58,12 +58,17 @@ learn-golang/
 │   ├── 4.2_nested_structs/
 │   ├── 4.3_embedded_structs/
 │   └── 4.4_struct_methods/
-└── interfaces/            # Interfaces and polymorphism
-    ├── 5.1_introduction/
-    ├── 5.2_implicit_interface/
-    ├── 5.3_multiple_interfaces/
-    ├── 5.4_type_assertions/
-    └── 5.5_type_switches/
+├── interfaces/            # Interfaces and polymorphism
+│   ├── 5.1_introduction/
+│   ├── 5.2_implicit_interface/
+│   ├── 5.3_multiple_interfaces/
+│   ├── 5.4_type_assertions/
+│   └── 5.5_type_switches/
+└── errors/                # Error handling
+    ├── 6.1_error_interface/
+    ├── 6.2_formatting_strings/
+    ├── 6.3_custom_errors/
+    └── 6.4_errors_package/
 ```
 
 ## Lessons
@@ -120,12 +125,21 @@ learn-golang/
 | `5.4_type_assertions` | Type Assertions | Extracting concrete types from interface values with `.(T)` |
 | `5.5_type_switches` | Type Switches | Handling multiple concrete types with `switch` on an interface |
 
+### Errors
+
+| Lesson | Topic | What you'll learn |
+|--------|-------|-------------------|
+| `6.1_error_interface` | Error Interface | Returning and checking errors with the `error` interface |
+| `6.2_formatting_strings` | Formatting Error Strings | Building error messages with `fmt.Sprintf` |
+| `6.3_custom_errors` | Custom Errors | Creating custom error types by implementing `Error()` |
+| `6.4_errors_package` | Errors Package | Creating errors with `errors.New` from the standard library |
+
 ## Running All Lessons
 
 Run every lesson in order:
 
 ```bash
-for dir in introduction/*/ variables/*/ functions/*/ structs/*/ interfaces/*/; do
+for dir in introduction/*/ variables/*/ functions/*/ structs/*/ interfaces/*/ errors/*/; do
   echo "Running $dir"
   go run "$dir/main.go"
   echo
